@@ -12,17 +12,17 @@ const observable = new Observable(subscriber => {
   }, 200);
 });
 
-observable.subscribe(observer);
-
 let count = 0;
 
-function observer(char) {
+const observer = char => {
   process.stdout.write(char);
   count++;
   if (count > 50) {
     process.stdout.write('\n');
     process.exit(0);
   }
-}
+};
+
+observable.subscribe(observer);
 
 console.dir({ observer, observable });

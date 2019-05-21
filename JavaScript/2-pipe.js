@@ -18,17 +18,17 @@ const destination = source.pipe(
   map(char => char.toUpperCase())
 );
 
-destination.subscribe(observer);
-
 let count = 0;
 
-function observer(char) {
+const observer = char => {
   process.stdout.write(char);
   count++;
   if (count > 50) {
     process.stdout.write('\n');
     process.exit(0);
   }
-}
+};
+
+destination.subscribe(observer);
 
 console.dir({ observer, source, destination });
