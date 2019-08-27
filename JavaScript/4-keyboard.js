@@ -33,8 +33,8 @@ const cursors = keyboard.pipe(
   filter(buf => (buf[0] === 27) && (buf[1] === 91)),
   map(buf => buf[2]),
   map(key => arrows[key]),
-  throttleTime(1000),
-  //debounceTime(2000),
+  //throttleTime(1000),
+  debounceTime(2000),
 );
 
 cursors.subscribe(cursor => {

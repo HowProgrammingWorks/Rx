@@ -1,10 +1,10 @@
 {
   "name": "rxjs-example",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reactive Extensions Example",
   "author": "Timur Shemsedinov <timur.shemsedinov@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "rxjs": "^6.5.1"
+    "rxjs": "^6.5.2"
   }
 }

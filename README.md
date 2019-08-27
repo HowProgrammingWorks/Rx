@@ -1,2 +1,1 @@
-# Rx
-Reactive Extensions (Rx)
+# Reactive Extensions (Rx)
