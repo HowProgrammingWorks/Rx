@@ -6,7 +6,7 @@ const { filter, map } = require('rxjs/operators');
 const randomChar = () => String
   .fromCharCode(Math.floor((Math.random() * 25) + 97));
 
-const source = new Observable(subscriber => {
+const source = new Observable((subscriber) => {
   setInterval(() => {
     const char = randomChar();
     subscriber.next(char);
@@ -14,13 +14,13 @@ const source = new Observable(subscriber => {
 });
 
 const destination = source.pipe(
-  filter(char => !'aeiou'.includes(char)),
-  map(char => char.toUpperCase())
+  filter((char) => !'aeiou'.includes(char)),
+  map((char) => char.toUpperCase())
 );
 
 let count = 0;
 
-const observer = char => {
+const observer = (char) => {
   process.stdout.write(char);
   count++;
   if (count > 50) {
