@@ -2,8 +2,7 @@
 
 const { Observable } = require('rxjs');
 const operators = require('rxjs/operators');
-const { map, filter, take, reduce } = operators;
-const { debounceTime, throttleTime } = operators;
+const { map, filter, take, reduce, debounceTime } = operators;
 
 process.stdin.setRawMode(true);
 
